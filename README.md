@@ -1,4 +1,4 @@
-### MediumReaderV2 🎧
+### 🎧 MediumReaderV2
 MEDIUMREADER is an app that helps you listen to articles and blogposts from multiple sources. It leverages Web scraping to extract the text from the article, and Google Text-to-sppeech APIs to convert the text to speech. The node gTTs wrapper further simplifies this process by also writing the response to an audio file. This audio file is the uploaded to AWS S3, and returned back to the reader to listen to.
 
 ### Where is Version 1 ?
@@ -46,3 +46,5 @@ $ npm run dev
 
 ### Deployment 
 The app is currently hosted on Heroku at https://mediumreader.herokuapp.com
+
+Thank you 🥂, Happy listening 🎧
