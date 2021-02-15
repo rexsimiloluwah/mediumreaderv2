@@ -26,7 +26,7 @@ $ npm run server
 
 **Testing using CURL:-**
 ```
-curl --location --request POST 'http://localhost:5000/api/v1/audio?lang=en' --header 'Content-Type: application/json' --data-raw '{
+$ curl --location --request POST 'http://localhost:5000/api/v1/audio?lang=en' --header 'Content-Type: application/json' --data-raw '{
     "url" : "https://blog.medium.com/a-less-long-more-connected-medium-c345db2d6a56"
 }'
 ```
