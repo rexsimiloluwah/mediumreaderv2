@@ -1,0 +1,28 @@
+@import './components/FormSelect/index.module.scss';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.rhap_container{
+  border-radius: 15px !important;
+  padding-top: 2rem !important;
+}
+
+.rhap_progress-indicator{
+  background: #C774E4 !important;
+}
+
+.rhap_button-clear,
+.rhap_main-controls-button{
+  color: #C774E4 !important;
+}
+
