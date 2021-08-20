@@ -1,24 +1,7 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-let MONGODB_URI;
 
 
-
-switch(process.env.NODE_ENV){
-    case "development":
-        MONGODB_URI = process.env.MONGODB_URI_DEVELOPMENT
-        break;
-    case "production":
-        MONGODB_URI = process.env.MONGODB_URI_PRODUCTION
-        break;
-    default:
-        MONGODB_URI = process.env.MONGODB_URI_DEVELOPMENT
-}
-
-const connectToMongo = async() => {
+const connectToMongo = async(MONGODB_URI) => {
     try{
         const conn = await mongoose.connect(MONGODB_URI, {
             useCreateIndex: true,

@@ -1,26 +1,23 @@
 @import '../../assets/styles/global.scss';
 
-html,
 body{
     background: url("../../assets/images/mediumreaderbg.png");
-    width: 100%;
 }
 
 .main{
-    margin: 5rem auto;
-    position: relative;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 90%;
-    height: 100%;
     img.logo{
         width: 100%;
     }
 
     @media (min-width: 1024px){
+        width: 100%;
         img.logo{
             width: 60%;
         }

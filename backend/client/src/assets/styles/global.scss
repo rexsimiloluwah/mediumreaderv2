@@ -67,6 +67,11 @@ $break-point-xxl: 1200px;
   font-size: 16px;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 h1 {
   @extend %h;
   font-size: 44px;

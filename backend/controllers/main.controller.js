@@ -9,10 +9,10 @@ import {scrapeText} from '../utils/textScraper';
 export default async function main(req,res,next){
     try{
         const response = await scrapeText(req.body.url);
-        const lang = req.query.lang;
+        const lang = req.query.lang | "en";
 
         // Truncating to only 1000 words, for performance bottlenecks (Sigh...)
-        const text = response.data.split(" ").length > 1000 ? response.data.split(" ").slice(0, 1000).join(" ") : response.data
+        const text = response.data.split(" ").length > 5000 ? response.data.split(" ").slice(0, 1000).join(" ") : response.data
         /* Initialize Google Text-to-speech */
         let gtts = new gTTS(text, lang);
         let output = path.resolve('public','uploads', Date.now()+'.mp3');
@@ -48,6 +48,6 @@ export default async function main(req,res,next){
     }
     catch(error){
         console.error(error);
-        return next(new HttpError(error.message, error.status))
+        return next(new HttpError(error.message, 500))
     }
 }

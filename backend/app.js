@@ -6,11 +6,11 @@ import HttpError from './errors/HttpError';
 import connectToMongo from './utils/connectToMongo';
 import dotenv from 'dotenv';
 import {MainRouter} from './routes';
-dotenv.config();
-
 
 /* Initialize Express app */
 const app = express();
+
+dotenv.config();
 
 /* Middlewares */
 app.use(bodyParser.json())
@@ -19,7 +19,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 /* Connect to Database (MongoDB) */
-connectToMongo();
+let MONGODB_URI = process.env.NODE_ENV;
+
+switch(MONGODB_URI){
+    case "development":
+        MONGODB_URI = process.env.MONGODB_URI_DEVELOPMENT
+        break;
+    case "production":
+        MONGODB_URI = process.env.MONGODB_URI_PRODUCTION
+        break;
+    default:
+        MONGODB_URI = process.env.MONGODB_URI_DEVELOPMENT
+}
+
+connectToMongo(MONGODB_URI);
 
 /* Handling CORS */
 app.use((req,res,next) => {
@@ -57,6 +70,10 @@ app.use((error,req,res,next) => {
     if(res.headerSent){
         return next(error);
     }
+
+    req.setTimeout(1000000, ()=>{
+        return next("Request Timeout!");
+    })
 
     return res.status(error.code || 500).json({
         error : error.message || "An unknown error occurred."

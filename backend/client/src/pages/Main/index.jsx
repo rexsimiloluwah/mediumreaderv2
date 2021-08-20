@@ -9,6 +9,7 @@ import {toast} from 'react-toastify';
 import Loader from 'react-loader-spinner';
 import Modal from '../../components/Modal';
 import Button from '../../components/Button';
+import Nav from '../../components/Nav';
 import style from './index.module.scss';
 
 export default function Main(){
@@ -21,19 +22,13 @@ export default function Main(){
 
     const handleSelectLanguage = (e) => {
         setLanguage(e);
+        //console.log(language);
     }
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     }
 
-    if(!modalPopped){
-        setTimeout(function(){
-            setIsOpen(true);
-            setModalPopped(true)
-        }, 120000)
-    }
-    
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -63,8 +58,10 @@ export default function Main(){
 
     return(
         <>
+        <Nav />
         <PopUp isOpen = {isOpen} handleToggle={handleToggle}/>
-        <section className={style.main}>
+        <section>
+            <div className={style["main"]}>
             <img src={Logo} alt="Logo" className={style.logo} />
             <p>LISTEN to your Favourite Blog posts and Articles online, Enhance retention and productivity.</p>
             <div className={style.container}>
@@ -110,7 +107,7 @@ export default function Main(){
                     : 
                     ""
                 }
-            </div>
+            </div></div>
         </section>
 
         <div className={style["credits"]}>
