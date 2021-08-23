@@ -1,0 +1,39 @@
+@import '../../assets/styles/global.scss';
+
+.articles__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto;
+    width: 90%;
+
+    h1{
+        color: $primary-color-dark;
+    }
+}
+
+.article__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    > div{
+        background: #FFF;
+        border: 1px solid $primary-color-light;
+        padding: 1rem;
+        border-radius: 15px;
+        width: 48%;
+        margin: 1rem 0;
+    }
+
+    .rhap_container{
+        background-color: red !important;
+    }
+
+    @media (max-width: 768px){
+        > div{
+            width: 100%;
+        }
+    }
+}
+
+

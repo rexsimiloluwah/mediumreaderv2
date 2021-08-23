@@ -18,12 +18,23 @@ nav{
 }
 
 .nav__brand{
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    padding: 0 .5rem;
+    border-radius: 5px;
 }
 ul.nav__menu{
     flex-direction: row;
     list-style: none;
     li{
-        padding: 0 2rem;
+        padding: 0 1rem;
+        &:last-child(){
+            button{
+                color: 'black'
+            }
+        }
     }
+
 }

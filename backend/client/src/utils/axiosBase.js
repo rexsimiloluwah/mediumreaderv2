@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const axiosBase = axios.create({
-    baseURL : "/api/v1"
+    baseURL : "http://localhost:5000/api/v1"
 })
 

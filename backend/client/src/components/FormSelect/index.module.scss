@@ -3,6 +3,7 @@
 */
 .select-search {
     width: 100%;
+    color: #000;
     position: relative;
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
@@ -51,6 +52,7 @@
     text-overflow: ellipsis;
     line-height: 36px;
     -webkit-appearance: none;
+    color: #000;
 }
 
 .select-search__input::-webkit-search-decoration,
@@ -77,6 +79,7 @@
 */
 .select-search__options {
     list-style: none;
+    color: #000 !important;
 }
 
 /**
@@ -102,6 +105,7 @@
     font-size: 14px;
     text-align: left;
     cursor: pointer;
+    color: #000;
 }
 
 .select-search--multiple .select-search__option {

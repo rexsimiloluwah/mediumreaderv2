@@ -16,6 +16,7 @@ code {
 .rhap_container{
   border-radius: 15px !important;
   padding-top: 2rem !important;
+  box-shadow: none !important;
 }
 
 .rhap_progress-indicator{
@@ -27,3 +28,11 @@ code {
   color: #C774E4 !important;
 }
 
+.input--error{
+  border: 1px solid lighten(crimson, 30%) !important;
+}
+
+.text--error{
+  color: crimson;
+  font-size: 12px;
+}

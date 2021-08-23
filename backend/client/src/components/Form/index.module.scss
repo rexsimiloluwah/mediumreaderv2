@@ -1,0 +1,48 @@
+@import '../../assets/styles/global.scss';
+
+.form__group{
+    position: relative;
+    margin: 1rem auto;
+    input{
+        width : 100%;
+        padding: 1rem;
+        outline: none;
+        border: 2px solid $primary-color-ghost;
+        margin: .1rem 0;
+        border-radius: 10px;
+
+        &:focus{
+            border: 1px solid $primary-color-light;
+        }
+    }
+
+    @media (max-width: $break-point-md){
+        margin: .5rem 0;
+        label{
+            font-size: 10px;
+        }
+
+        input{
+            padding: .7rem 1rem;
+        }
+    }
+}
+
+.form__group--row{
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+    >div{
+        width: 48%;
+        margin: .2rem 0;
+    }
+}
+
+@media (max-width : $break-point-s){
+    .form__group--row{
+        flex-direction: column;
+        >div{
+            width: 100%;
+        }
+    }
+}

@@ -13,7 +13,9 @@ $primaryGradient: linear-gradient(
 
 $primary-color: #C774E4;
 $primary-color-dark: #6A5870;
-$primary-color-light: #EECBFA;
+$primary-color-light: lighten(#6A5870, 30%);
+$primary-color-ghost: lighten(#6A5870, 50%);
+$primary-color-success: #2FCC8B;
 $border-radius: 15px;
 $border-color: #8692a6;
 $text-light: #8692a6;
@@ -75,25 +77,25 @@ $break-point-xxl: 1200px;
 h1 {
   @extend %h;
   font-size: 44px;
-  line-height: calc(44px * 1.3);
+  line-height: calc(44px * 1);
 }
 h2 {
   @extend %h;
 
   font-size: 36px;
-  line-height: calc(36px * 1.3);
+  line-height: calc(36px * 1);
 }
 h3 {
   @extend %h;
 
   font-size: 28px;
-  line-height: calc(28px * 1.3);
+  line-height: calc(28px * 1);
 }
 h4 {
   @extend %h;
 
   font-size: 24px;
-  line-height: calc(24px * 1.3);
+  line-height: calc(24px * 1);
 }
 
 label,

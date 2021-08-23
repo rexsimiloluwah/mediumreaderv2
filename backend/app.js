@@ -51,14 +51,14 @@ app.use((req,res,next) => {
 app.use("/api/v1/audio", MainRouter);
 
 /* Use React client app for to serve static files */
-if(process.env.NODE_ENV === "production"){
-    /* Set build folder */
-    app.use(express.static('client/build'));
+// if(process.env.NODE_ENV === "production"){
+//     /* Set build folder */
+//     app.use(express.static('client/build'));
 
-    app.get('*', (req,res) => {
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-    })
-}
+//     app.get('*', (req,res) => {
+//         res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+//     })
+// }
 
 /* Error Handling from Routes */
 app.use((req,res,next) => {
@@ -71,9 +71,9 @@ app.use((error,req,res,next) => {
         return next(error);
     }
 
-    req.setTimeout(1000000, ()=>{
-        return next("Request Timeout!");
-    })
+    // req.setTimeout(1000000, ()=>{
+    //     return next("Request Timeout!");
+    // })
 
     return res.status(error.code || 500).json({
         error : error.message || "An unknown error occurred."
