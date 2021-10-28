@@ -1,0 +1,138 @@
+@import '../../assets/styles/global.scss';
+
+body{
+    background: url("../../assets/images/mediumreaderbg.png");
+}
+
+.main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    img.logo{
+        width: 100%;
+    }
+
+    @media (min-width: $break-point-l){
+        width: 100%;
+        img.logo{
+            width: 60%;
+        }
+    }
+}
+
+.container{
+    width: 60%;
+    margin: 2rem 0;
+}
+
+
+.form--listen{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border: 2px solid $primary-color;
+    position: relative;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-radius: $border-radius;
+    background: #fff;
+
+    input{
+        flex-grow: 1;
+        outline: none;
+        border: none;
+        padding: .5rem 1rem;
+        width: 100%;
+    }
+
+    &:hover{
+        border: 2px solid $primary-color-success;
+    }
+
+    button{
+        color: #FFF;
+        background: $primary-color-light;
+        padding: .8rem 1.5rem;
+        margin: 0 1rem;
+        font-size: 20px;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        width: 180px;
+        transition: .5s ease-in-out;
+        &:hover, &:focus{
+            background-color: $primary-color;
+        }
+
+        @media (max-width: $break-point-md){
+            margin: 0 .5rem;
+            font-size: 12px;
+        }
+
+        i{
+            vertical-align: center;
+        }
+
+        // @media (max-width: 768px){
+        //     i{ display: none}
+        // }
+    }
+}
+
+i{
+    vertical-align: middle;
+}
+
+.player{
+    margin: 2rem auto;
+}
+
+.text--link{
+    margin: 3rem 0;
+    border: 1px solid $primary-color;
+    padding: 1rem;
+
+    a{
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+
+.article-actions__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a{
+        margin: .4rem;
+    }
+    button{
+        padding: .5rem;
+        font-size: 14px;
+        border-radius: 10px;
+        background-color: $primary-color-success;
+        opacity: .7;
+        i{
+            vertical-align: middle;
+        }
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.credits{
+    bottom: 10px;
+    p{
+        text-align: center;
+    }
+}
+
+@media (max-width: $break-point-md){
+    .container{
+        width: 100%;
+    }
+}

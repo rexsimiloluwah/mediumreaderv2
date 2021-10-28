@@ -1,0 +1,68 @@
+@import "../../assets/styles/global.scss";
+
+button{
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    color: #FFF;
+    &:disabled{
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}
+
+.twitter,
+.github,
+.feedback{
+    padding: 1rem 2rem;
+    margin: .3rem 0;
+}
+
+
+.nav__button{
+    background-color: $primary-color-light;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    &:hover{
+        background-color: $primary-color;
+    }
+}
+
+.btn--success{
+    padding: .5rem 0;
+    border-radius: 15px;
+    background-color: $primary-color-success;
+}
+
+.twitter{
+    background-color: #1DA1F2;
+}
+
+.github{
+    background-color: #211F1F;
+}
+
+.feedback{
+    background-color: #6A5870;
+}
+
+.google__login{
+    background: transparent;
+    border: 1px solid lightgray;
+    padding: .8rem 2rem;
+    color: lighten(#000, 60%);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+    img{
+        width: 20px;
+        height: 20px;
+        margin: auto .5rem;
+        vertical-align: middle;
+    }
+}
